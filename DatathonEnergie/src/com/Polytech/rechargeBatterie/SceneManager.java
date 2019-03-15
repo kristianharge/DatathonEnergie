@@ -17,7 +17,7 @@ public class SceneManager {
     public SceneManager(){
         _activeScene = 0;
         _scenes = new Scene[_numberOfScenes];
-        //_scenes[0] = new MainMenu(this);
+        _scenes[0] = new LogIn(this);
         //_scenes[1] = new GameScene(this);
         //show the first scene
         _scenes[0].render();
