@@ -22,22 +22,23 @@ public class LogIn extends Scene{
     
     private final TextField _username;
     private final TextField _password;
-    private final Button _play_b;
+    private final Button _submit_b;
     
     public LogIn(SceneManager sm) {
         super(sm);
         _sceneManager = sm;
         
-        _form = new Form("Afortunadamente", BoxLayout.y());
-        _form.add(new Label("Escribe el nombre de los participantes"));
+        _form = new Form("Reprend de l'énergie", BoxLayout.y());
+        _form.add(new Label("Inscription"));
         
         //Create the player fields
         _username = new TextField("","Username", 20, TextArea.ANY);
         _form.add(_username);
         _password = new TextField("","Password", 20, TextArea.ANY);
+        _password.setConstraint(TextField.PASSWORD);
         _form.add(_password);
-        _play_b = new Button("Jugar");
-        _play_b.addActionListener((ActionEvent e) -> destroyScene());
-        _form.add(_play_b);
+        _submit_b = new Button("Submit");
+        _submit_b.addActionListener((ActionEvent e) -> destroyScene());
+        _form.add(_submit_b);
     }
 }
