@@ -10,7 +10,7 @@ package com.Polytech.rechargeBatterie;
  * @author kh
  */
 public class SceneManager {
-    private final int _numberOfScenes = 2;
+    private final int _numberOfScenes = 3;
     private final Scene[] _scenes;
     private int _activeScene;
     
@@ -19,6 +19,7 @@ public class SceneManager {
         _scenes = new Scene[_numberOfScenes];
         _scenes[0] = new LogIn(this);
         _scenes[1] = new Map(this);
+        _scenes[2] = new SignIn(this);
         //show the first scene
         _scenes[0].render();
     }
@@ -31,6 +32,9 @@ public class SceneManager {
         }
         else
             throw new Exception ("Scene number out of bounds");
+    }
     
+    public void setMap(int sceneNumber){
+        ((Map)_scenes[sceneNumber]).setMap();
     }
 }

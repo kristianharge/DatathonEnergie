@@ -52,6 +52,9 @@ public class MyApplication {
             _current.show();
             return;
         }
+        
+        //to initialize google maps
+        _sceneManager.setMap(1);
     }
 
     public void stop() {
