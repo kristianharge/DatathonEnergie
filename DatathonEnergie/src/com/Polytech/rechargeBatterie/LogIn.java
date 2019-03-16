@@ -27,6 +27,7 @@ public class LogIn extends Scene{
     public LogIn(SceneManager sm) {
         super(sm);
         _sceneManager = sm;
+        _nextScene = 1;
         
         _form = new Form("Reprend de l'énergie", BoxLayout.y());
         _form.add(new Label("Inscription"));

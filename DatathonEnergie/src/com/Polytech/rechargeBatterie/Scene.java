@@ -14,6 +14,7 @@ import com.codename1.ui.Form;
 public class Scene {
     public Form _form;
     protected SceneManager _sceneManager;
+    protected int _nextScene;
     
     public Scene(SceneManager sm){
         _sceneManager = sm;
@@ -26,7 +27,7 @@ public class Scene {
     protected void destroyScene(){
         //called when we change of scene
         try{
-            _sceneManager.changeScene(1);//loading game scene
+            _sceneManager.changeScene(_nextScene);//loading game scene
         }
         catch (Exception e){
             System.out.print(e);
