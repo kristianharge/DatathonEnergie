@@ -11,8 +11,8 @@ public class XmlParser {
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(inputFile);
-        NodeList baseElmntLst_gold  = doc.getElementsByTagName("pdv_liste");
-        Element woaw = (Element) baseElmntLst_gold.item(0);       
+        NodeList nope  = doc.getElementsByTagName("pdv_liste");
+        Element woaw = (Element) nope.item(0);       
         NodeList nod = woaw.getChildNodes();
         Element me = null;
         for (int i = 0; i < nod.getLength(); ++i)
